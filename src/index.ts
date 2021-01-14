@@ -1,18 +1,12 @@
-// import css from './index.scss'
-// import pic from './timg (2).jpg'
-let a: number = 0;
-import axios from 'axios'
-axios.get('/some/path').then(res => {
-    console.log(res);
+import Stage from './stage'
+import Sprite from './sprite'
 
-}).catch(err => {
-    console.log(err);
-
+const stage = new Stage({
+    width: 512, height: 512, antialias: true,
 })
-console.log(a);
-// const img = new Image()
-// img.src = pic
-// let ele = `<div class=${css.font}>${a}</div>`
-// document.write(ele)
+//Add the canvas that Pixi automatically created for you to the HTML document
+document.body.appendChild(stage.view);
 
-// document.getElementsByTagName('body')[0].append(img)
+
+const sprite = new Sprite({source:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3175175485,30977167&fm=15&gp=0.jpg'},stage.stage)
+

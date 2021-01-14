@@ -38,6 +38,7 @@
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "pixi.js": "^4.4.5"
   }
 }
